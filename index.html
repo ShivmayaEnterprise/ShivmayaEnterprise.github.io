@@ -12,8 +12,6 @@ content="Shivmaya Enterprise is a trusted wholesale clothing supplier in Kolkata
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Premium Font -->
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
@@ -40,6 +38,7 @@ Shivmaya Enterprise
 <a href="#about">About</a>
 <a href="#products">Products</a>
 <a href="#gallery">Gallery</a>
+<a href="#enquiry">Enquiry</a>
 <a href="#contact">Contact</a>
 
 </div>
@@ -76,59 +75,43 @@ Explore Products
 
 <div class="trust-card">
 <h3>✔ Wholesale Lots</h3>
-<p>Large quantity clothing supply for retailers</p>
+<p>Large quantity clothing supply</p>
 </div>
 
 <div class="trust-card">
 <h3>✔ Competitive Pricing</h3>
-<p>Affordable wholesale rates for better margins</p>
+<p>Affordable wholesale rates</p>
 </div>
 
 <div class="trust-card">
 <h3>✔ All Categories</h3>
-<p>Men, Women and Kids clothing collections</p>
+<p>Men, Women and Kids wear</p>
 </div>
 
 <div class="trust-card">
 <h3>✔ Trusted Supplier</h3>
-<p>Reliable service with consistent quality</p>
+<p>Reliable and consistent supply</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ABOUT SECTION (NEW PROFESSIONAL SECTION) -->
+<!-- ABOUT (TEXT ONLY) -->
 
 <section id="about" class="about">
 
-<div class="about-container">
-
-<div class="about-text">
-
-<h2>
-About Shivmaya Enterprise
-</h2>
+<h2>About Shivmaya Enterprise</h2>
 
 <p>
 
-Shivmaya Enterprise is a trusted wholesale clothing supplier based in Kolkata, dedicated to providing high-quality apparel at competitive wholesale prices.
+Shivmaya Enterprise is a trusted wholesale clothing supplier based in Kolkata, offering premium-quality clothing lots for men, women, and children.
 
-We specialize in supplying clothing lots for men, women, and children, making it easy for retailers and resellers to source reliable and affordable fashion products.
+We focus on providing reliable supply, consistent product quality, and competitive wholesale pricing for retailers and resellers.
 
-Our commitment to quality, consistency, and customer satisfaction has helped us build long-term relationships with businesses across multiple markets.
+Our goal is to build long-term business relationships by delivering dependable service and value to our customers.
 
 </p>
-
-</div>
-
-<div class="about-image">
-
-<img src="images/about.jpeg">
-
-</div>
-
-</div>
 
 </section>
 
@@ -180,6 +163,44 @@ Our commitment to quality, consistency, and customer satisfaction has helped us 
 <img src="images/gallery6.jpeg">
 
 </div>
+
+</section>
+
+<!-- ENQUIRY FORM -->
+
+<section id="enquiry" class="enquiry">
+
+<h2>Product Enquiry</h2>
+
+<p>
+Send us your requirement and we will contact you shortly.
+</p>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Your Phone Number"
+required>
+
+<textarea
+id="message"
+placeholder="Enter your enquiry (Example: Need 50 pcs kids wear)"
+required>
+</textarea>
+
+<button type="submit">
+Send Enquiry on WhatsApp
+</button>
+
+</form>
 
 </section>
 
@@ -236,6 +257,36 @@ target="_blank">
 Chat on WhatsApp
 
 </a>
+
+<!-- WHATSAPP SCRIPT -->
+
+<script>
+
+function sendWhatsApp() {
+
+var name =
+document.getElementById("name").value;
+
+var phone =
+document.getElementById("phone").value;
+
+var message =
+document.getElementById("message").value;
+
+var whatsappMessage =
+"Name: " + name +
+"%0aPhone: " + phone +
+"%0aMessage: " + message;
+
+var whatsappURL =
+"https://wa.me/919330160994?text=" +
+whatsappMessage;
+
+window.open(whatsappURL, "_blank");
+
+}
+
+</script>
 
 </body>
 
