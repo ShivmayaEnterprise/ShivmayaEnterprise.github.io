@@ -32,7 +32,13 @@ Shivmaya Enterprise
 
 </div>
 
-<div class="nav-links">
+<!-- HAMBURGER -->
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links" id="navLinks">
 
 <a href="#">Home</a>
 <a href="#about">About</a>
@@ -67,7 +73,7 @@ Explore Products
 
 </section>
 
-<!-- TRUST SECTION -->
+<!-- TRUST -->
 
 <section class="trust">
 
@@ -97,7 +103,7 @@ Explore Products
 
 </section>
 
-<!-- ABOUT (TEXT ONLY) -->
+<!-- ABOUT -->
 
 <section id="about" class="about">
 
@@ -166,7 +172,7 @@ Our goal is to build long-term business relationships by delivering dependable s
 
 </section>
 
-<!-- ENQUIRY FORM -->
+<!-- ENQUIRY -->
 
 <section id="enquiry" class="enquiry">
 
@@ -248,7 +254,7 @@ loading="lazy">
 
 </div>
 
-<!-- WHATSAPP BUTTON -->
+<!-- FLOATING WHATSAPP -->
 
 <a href="https://wa.me/919330160994"
 class="whatsapp"
@@ -258,9 +264,11 @@ Chat on WhatsApp
 
 </a>
 
-<!-- WHATSAPP SCRIPT -->
+<!-- SCRIPTS -->
 
 <script>
+
+/* WhatsApp Form */
 
 function sendWhatsApp() {
 
@@ -283,6 +291,17 @@ var whatsappURL =
 whatsappMessage;
 
 window.open(whatsappURL, "_blank");
+
+}
+
+/* Hamburger Menu */
+
+function toggleMenu() {
+
+var nav =
+document.getElementById("navLinks");
+
+nav.classList.toggle("active");
 
 }
 
