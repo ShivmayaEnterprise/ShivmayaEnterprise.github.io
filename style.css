@@ -12,12 +12,14 @@ transition: 0.3s;
 }
 
 /* DARK MODE */
+
 body.dark {
 background: #111;
-color: #fff;
+color: white;
 }
 
 /* HEADER */
+
 header {
 display: flex;
 justify-content: space-between;
@@ -27,6 +29,7 @@ position: sticky;
 top: 0;
 background: white;
 z-index: 1000;
+transition: 0.3s;
 }
 
 body.dark header {
@@ -52,10 +55,11 @@ cursor: pointer;
 }
 
 /* HERO */
+
 .hero {
-height: 50vh;
-overflow: hidden;
+height: 55vh;
 position: relative;
+overflow: hidden;
 }
 
 .hero img {
@@ -73,7 +77,19 @@ text-align: center;
 color: white;
 }
 
+/* FADE */
+
+.fade-in {
+animation: fade 2s ease;
+}
+
+@keyframes fade {
+from {opacity:0;}
+to {opacity:1;}
+}
+
 /* PRODUCTS */
+
 .products {
 padding: 40px 15px;
 text-align: center;
@@ -85,6 +101,8 @@ grid-template-columns: 1fr;
 gap: 20px;
 }
 
+/* CARD */
+
 .card {
 border-radius: 15px;
 overflow: hidden;
@@ -93,7 +111,7 @@ transition: 0.3s;
 }
 
 .card:hover {
-transform: translateY(-5px);
+transform: translateY(-8px) scale(1.02);
 }
 
 .card img {
@@ -103,6 +121,7 @@ object-fit: cover;
 }
 
 /* BUTTON */
+
 .btn {
 display: inline-block;
 padding: 10px 20px;
@@ -111,6 +130,11 @@ color: white;
 border-radius: 25px;
 text-decoration: none;
 margin: 10px;
+transition: 0.3s;
+}
+
+.btn:hover {
+opacity: 0.8;
 }
 
 body.dark .btn {
@@ -119,6 +143,7 @@ color: black;
 }
 
 /* QR */
+
 .qr-section {
 padding: 40px 15px;
 text-align: center;
@@ -126,10 +151,10 @@ text-align: center;
 
 .qr-section img {
 width: 180px;
-margin-top: 10px;
 }
 
 /* MAP */
+
 .map {
 padding: 40px 15px;
 }
@@ -137,17 +162,19 @@ padding: 40px 15px;
 .map iframe {
 width: 100%;
 height: 300px;
-border: none;
 border-radius: 10px;
+border: none;
 }
 
 /* CONTACT */
+
 .contact {
 padding: 40px 15px;
 text-align: center;
 }
 
 /* FOOTER */
+
 footer {
 padding: 20px;
 text-align: center;
@@ -160,13 +187,49 @@ background: white;
 color: black;
 }
 
+/* WHATSAPP BUTTON */
+
+.whatsapp {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+font-size: 24px;
+padding: 14px;
+border-radius: 50%;
+text-decoration: none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: 0.3s;
+}
+
+.whatsapp:hover {
+transform: scale(1.1);
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+opacity: 0;
+transform: translateY(40px);
+transition: 0.6s;
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+
 /* DESKTOP */
+
 @media(min-width:768px) {
+
 .grid {
 grid-template-columns: repeat(3,1fr);
 }
 
 .hero {
-height: 60vh;
+height: 65vh;
 }
+
 }
